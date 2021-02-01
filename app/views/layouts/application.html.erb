@@ -11,13 +11,11 @@
   </head>
   <body>
     <header>
-      <h1>Flix</h1>
+      <%= image_tag("logo") %>
     </header>
-
     <div class="content">
       <%= yield %>
     </div>
-
     <footer>
       <p>
         Copyright &copy; <%= Time.now.year %>
