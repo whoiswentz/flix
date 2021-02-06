@@ -25,6 +25,11 @@ class MoviesController < ApplicationController
     redirect_to @movie if @movie.save
   end
 
+  def destroy
+    @movie = Movie.find(params[:id])
+    redirect_to movies_url if @movie.destroy
+  end
+
   private
   def movie_params
     params.require(:movie).permit(:title, :description, :total_gross, :released_at)
