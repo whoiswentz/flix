@@ -1,4 +1,6 @@
 class MoviesController < ApplicationController
+  add_flash_types(:danger)
+
   def index
     @movies = Movie.released
   end
@@ -36,12 +38,16 @@ class MoviesController < ApplicationController
 
   def destroy
     @movie = Movie.find(params[:id])
-    redirect_to movies_url if @movie.destroy
+    if @movie.destroy
+      redirect_to movies_url, notice: "Movie #{@movie.title} deleted"
+    else
+      redirect_to @movie
+    end
   end
 
   private
   def movie_params
     params.require(:movie)
-          .permit(:title, :description, :total_gross, :released_at, :director, :duration, :image_file_name)
+          .permit(:title, :description, :total_gross, :released_on, :director, :duration, :image_file_name, :rating)
   end
 end
