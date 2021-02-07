@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a210bbb-5220-44f6-98b0-7ada17b852b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/reviews.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/reviews_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/reviews_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/review.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20210207013601_create_reviews.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controllers/reviews_controller_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fixtures/reviews.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/models/review_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/reviews/index.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/shared/_stars.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/movie.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/movie.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/reviews_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/reviews_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/review.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/review.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/movies/show.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/movies/show.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +58,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/views/movies" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/shared" />
     </key>
   </component>
   <component name="RubyModuleManagerSettings">
@@ -192,7 +190,8 @@
       <workItem from="1612486155132" duration="20000" />
       <workItem from="1612486996226" duration="1582000" />
       <workItem from="1612571449224" duration="3081000" />
-      <workItem from="1612621451630" duration="10612000" />
+      <workItem from="1612621451630" duration="10672000" />
+      <workItem from="1612720748355" duration="1385000" />
     </task>
     <servers />
   </component>
