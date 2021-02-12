@@ -30,7 +30,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
 
     if @user.update(user_params)
-      session[:user_id] = nil
       redirect_to @user, notice: 'Account successfully updated'
     else
       render :edit
@@ -40,6 +39,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
+    session[:user_id] = nil
     redirect_to movies_url, alert: 'Account successfully destroyed'
   end
 
