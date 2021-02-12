@@ -30,6 +30,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
 
     if @user.update(user_params)
+      session[:user_id] = nil
       redirect_to @user, notice: 'Account successfully updated'
     else
       render :edit
