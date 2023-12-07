@@ -72,3 +72,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "lograge", "~> 0.14.0"
