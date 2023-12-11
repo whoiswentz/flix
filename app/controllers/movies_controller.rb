@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  before_action :set_movie, only: [:show, :edit, :update]
+  before_action :set_movie, only: [:show, :edit, :update, :destroy]
 
   def new
     @movie = Movie.new
@@ -22,6 +22,11 @@ class MoviesController < ApplicationController
   def update
     @movie.update(movie_params)
     redirect_to @movie
+  end
+
+  def destroy
+    @movie.destroy
+    redirect_to movies_path, status: :see_other
   end
 
   private
