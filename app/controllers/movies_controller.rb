@@ -1,6 +1,16 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update]
 
+  def new
+    @movie = Movie.new
+  end
+
+  def create
+    @movie = Movie.create(movie_params)
+    @movie.save
+    redirect_to @movie
+  end
+
   def index
     @movies = Movie.all
   end
@@ -10,13 +20,13 @@ class MoviesController < ApplicationController
   def edit; end
 
   def update
-    @movie.update(update_params)
+    @movie.update(movie_params)
     redirect_to @movie
   end
 
   private
 
-  def update_params
+  def movie_params
     params
       .require(:movie)
       .permit(:title, :rating, :description, :released_on, :total_gross)
