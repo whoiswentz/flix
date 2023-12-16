@@ -8,7 +8,12 @@
     <h4><%= @movie.director %></h4>
     <h4><%= @movie.duration %></h4>
     <h3>Released on: <%= day_and_time(@movie) %></h3>
+    <div class="reviews">
+      <%= link_to "Reviews", movie_reviews_path(@movie) %>
+    </div>
     <p><%= @movie.description %>
+
+    
   </div>
 </section>
 
