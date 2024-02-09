@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show]
+  before_action :set_user, only: [:show, :edit, :update, :delete]
 
   def index
     @users = User.all
@@ -18,6 +18,21 @@ class UsersController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def edit; end
+
+  def update
+    if @user.update(user_params)
+      redirect_to @user, notice: "Account successfully updated"
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def delete
+    @user.destroy
+    redirect_to movie_url, status: :see_other, alert: "Account successfully deleted!"
   end
 
   private
